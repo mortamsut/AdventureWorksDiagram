@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Mil6jff7IOTnoR0i13VwXzFXZn7g/7c1RChVOu6UaAX0ey9Qonk3zj31CecnI3DM+ZyHdl9r0FlHEV/gua1UUA==",
+  "dgSpecHash": "SAQd4h7QVRoVww3dGoxeeM9Tg8tI9fko7DjAZE0Nxkf+NnsYUdj6CDPz0YDNu7DwvKgX883coUpgPM6SxOZfhw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\The user\\Desktop\\לימודים\\למידה עצמית\\AdventureWorksDiagram\\AdventureWorksDiagram\\box\\AdventureWorksDiagram.csproj",
+  "projectFilePath": "C:\\Users\\The user\\Desktop\\לימודים\\למידה עצמית\\AdventureWorksSchema\\AdventureWorksSchema\\box\\AdventureWorksSchema.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\The user\\.nuget\\packages\\microsoft.msagl\\1.1.6\\microsoft.msagl.1.1.6.nupkg.sha512",
     "C:\\Users\\The user\\.nuget\\packages\\microsoft.msagl.drawing\\1.1.6\\microsoft.msagl.drawing.1.1.6.nupkg.sha512",

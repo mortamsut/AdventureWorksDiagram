@@ -2,7 +2,7 @@ using Microsoft.Msagl.Core.Geometry.Curves;
 using Microsoft.Msagl;
 using Microsoft.Msagl.Splines;
 using Microsoft.Msagl.Drawing;
-namespace AdventureWorksDiagram
+namespace AdventureWorksSchema
 {
     internal static class Program
     {

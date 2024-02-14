@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 using Microsoft.Msagl.GraphViewerGdi;
 using System.Windows.Forms;
 
-namespace AdventureWorksDiagram
+namespace AdventureWorksSchema
 {
         internal delegate void MD();
 

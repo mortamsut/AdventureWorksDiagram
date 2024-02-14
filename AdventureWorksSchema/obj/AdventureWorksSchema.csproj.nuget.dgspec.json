@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\The user\\Desktop\\לימודים\\למידה עצמית\\AdventureWorksDiagram\\AdventureWorksDiagram\\box\\AdventureWorksDiagram.csproj": {}
+    "C:\\Users\\The user\\Desktop\\לימודים\\למידה עצמית\\AdventureWorksSchema\\AdventureWorksSchema\\box\\AdventureWorksSchema.csproj": {}
   },
   "projects": {
-    "C:\\Users\\The user\\Desktop\\לימודים\\למידה עצמית\\AdventureWorksDiagram\\AdventureWorksDiagram\\box\\AdventureWorksDiagram.csproj": {
+    "C:\\Users\\The user\\Desktop\\לימודים\\למידה עצמית\\AdventureWorksSchema\\AdventureWorksSchema\\box\\AdventureWorksSchema.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\The user\\Desktop\\לימודים\\למידה עצמית\\AdventureWorksDiagram\\AdventureWorksDiagram\\box\\AdventureWorksDiagram.csproj",
-        "projectName": "AdventureWorksDiagram",
-        "projectPath": "C:\\Users\\The user\\Desktop\\לימודים\\למידה עצמית\\AdventureWorksDiagram\\AdventureWorksDiagram\\box\\AdventureWorksDiagram.csproj",
+        "projectUniqueName": "C:\\Users\\The user\\Desktop\\לימודים\\למידה עצמית\\AdventureWorksSchema\\AdventureWorksSchema\\box\\AdventureWorksSchema.csproj",
+        "projectName": "AdventureWorksSchema",
+        "projectPath": "C:\\Users\\The user\\Desktop\\לימודים\\למידה עצמית\\AdventureWorksSchema\\AdventureWorksSchema\\box\\AdventureWorksSchema.csproj",
         "packagesPath": "C:\\Users\\The user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\The user\\Desktop\\לימודים\\למידה עצמית\\AdventureWorksDiagram\\AdventureWorksDiagram\\box\\obj\\",
+        "outputPath": "C:\\Users\\The user\\Desktop\\לימודים\\למידה עצמית\\AdventureWorksSchema\\AdventureWorksSchema\\box\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

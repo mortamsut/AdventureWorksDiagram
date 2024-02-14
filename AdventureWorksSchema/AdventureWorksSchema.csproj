@@ -6,6 +6,8 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>AdventureWorksSchema</AssemblyName>
+    <RootNamespace>AdventureWorksSchema</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

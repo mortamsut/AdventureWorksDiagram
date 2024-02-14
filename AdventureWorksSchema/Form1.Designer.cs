@@ -1,4 +1,4 @@
-﻿namespace AdventureWorksDiagram
+﻿namespace AdventureWorksSchema
 {
     partial class Form1
     {
