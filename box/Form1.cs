@@ -43,8 +43,8 @@ namespace AdventureWorksDiagram
             if (obj is IViewerEdge edge) // Check if the object is an edge
             {
                 // Get the source and target nodes of the edge
-                string sourceNode = edge.Edge.SourceNode.UserData.ToString();
-                string targetNode = edge.Edge.TargetNode.UserData.ToString();
+                string sourceNode = edge.Edge.SourceNode.LabelText;
+                string targetNode = edge.Edge.TargetNode.LabelText;
                  str =$"each {sourceNode} may have multiple { targetNode}";
                 // Show tooltip with the names of the source and target nodes
             
@@ -93,27 +93,56 @@ namespace AdventureWorksDiagram
                     SqlCommand tablesCommand = new SqlCommand("SELECT t.TABLE_NAME, k.COLUMN_NAME FROM INFORMATION_SCHEMA.TABLES t JOIN INFORMATION_SCHEMA.KEY_COLUMN_USAGE k ON t.TABLE_NAME = k.TABLE_NAME WHERE t.TABLE_TYPE = 'BASE TABLE'", connection);
                     using (SqlDataReader reader = tablesCommand.ExecuteReader())
                     {
+
                         while (reader.Read())
                         {
+
                             string tableName = reader.GetString(0);
                             string primaryKey = reader.GetString(1);
 
-                            // Add a node for the table with the table name
 
+                            var tableNode = new Subgraph(tableName);
+                            tableNode.Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightPink;
+                            graph.RootSubgraph.AddSubgraph(tableNode);
 
-                            var tableNode = graph.AddNode(tableName);
-                            tableNode.UserData = tableName;
-                            tableNode.Label.Text = tableName;
-                            tableNode.Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightBlue;
-                            tableNode.Label.FontSize = 1000;
-                            tableNode.Label.FontName = "Arial";
-                            tableNode.Label.Width = 100;
-                            tableNode.Label.Height = 40;
-                            tableNode.Label.FontColor = Microsoft.Msagl.Drawing.Color.Black;
+                            var pNode = graph.AddNode(primaryKey);
+                            pNode.LabelText = primaryKey;
+                            //n.LabelText = primaryKey;
+                            pNode.Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightYellow;
+                            tableNode.AddNode(graph.FindNode(primaryKey));
 
-                            // Add the primary key as a label to the node
-                            tableNode.LabelText += "\n" + primaryKey;
                         }
+
+                       
+
+                        /*    while (reader.Read())
+                            {
+                                string tableName = reader.GetString(0);
+                                string primaryKey = reader.GetString(1);
+
+                                // Add a node for the table with the table name
+                                var tableNode = new Subgraph(tableName);
+                                tableNode.Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightBlue;
+                                graph.AddNode(tableNode);
+                                Node n = new Node("p");
+                                n.LabelText = "\n" + primaryKey;
+                                n.Attr.Color = Microsoft.Msagl.Drawing.Color.Yellow;
+                                tableNode.AddNode(n);
+
+
+                                *//*var tableNode = graph.AddNode(tableName);
+                                tableNode.UserData = tableName;
+                                tableNode.Label.Text = tableName;
+                                tableNode.Attr.FillColor = Microsoft.Msagl.Drawing.Color.LightBlue;
+                                tableNode.Label.FontSize = 1000;
+                                tableNode.Label.FontName = "Arial";
+                                tableNode.Label.Width = 100;
+                                tableNode.Label.Height = 40;
+                                tableNode.Label.FontColor = Microsoft.Msagl.Drawing.Color.Black;
+
+                                // Add the primary key as a label to the node
+                                tableNode.LabelText += "\n" + primaryKey;*//*
+                            }*/
                     }
 
                     SqlCommand foreignKeysCommand = new SqlCommand("SELECT OBJECT_NAME(parent_object_id) AS SourceTable, OBJECT_NAME(referenced_object_id) AS TargetTable, name AS ForeignKeyName FROM sys.foreign_keys", connection);
