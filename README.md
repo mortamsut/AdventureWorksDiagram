@@ -1,5 +1,5 @@
-# Adventure Works Diagram
-#### The project that creates a diagram of the database and the relationships between the tables
+# AdventureWorks Schema
+#### The project that creates a schema of the database and the relationships between the tables
 #### Using the Msagl library to create graphs
 #### This specific example uses the Microsoft AdventureWorks database
 
